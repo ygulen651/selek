@@ -1,4 +1,4 @@
-import { List, MapPin } from 'lucide-react';
+import { List } from 'lucide-react';
 
 const categories = [
   'Günübirlik Turlar',
@@ -52,7 +52,7 @@ export default function TourCategories() {
           {/* Content */}
           <div className="absolute bottom-0 left-0 right-0 p-4">
             <h4 className="text-white text-lg font-bold mb-1">Kültür Turları</h4>
-            <p className="text-white text-sm opacity-90">Türkiye'nin Her Bölgesine</p>
+            <p className="text-white text-sm opacity-90">Türkiye&apos;nin Her Bölgesine</p>
           </div>
         </div>
       </div>

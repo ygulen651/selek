@@ -30,7 +30,7 @@ export default function AboutPage() {
                 </h2>
                 <p className="text-gray-600 mb-4">
                   2015 yılında küçük bir ekiple başlayan yolculuğumuz, bugün binlerce mutlu müşteriyle devam ediyor. 
-                  Seyahat tutkumuz ve müşteri memnuniyeti odaklı yaklaşımımızla, Türkiye\'nin önde gelen seyahat 
+                  Seyahat tutkumuz ve müşteri memnuniyeti odaklı yaklaşımımızla, Türkiye&apos;nin önde gelen seyahat 
                   acentalarından biri haline geldik.
                 </p>
                 <p className="text-gray-600 mb-4">

@@ -1,4 +1,4 @@
-import { MapPin, Clock, Users, Star, Calendar } from 'lucide-react';
+import { Clock, Star, Calendar } from 'lucide-react';
 
 interface ModernTourCardProps {
   title: string;
@@ -13,7 +13,6 @@ interface ModernTourCardProps {
 
 export default function ModernTourCard({
   title,
-  location,
   duration,
   groupSize,
   price,
