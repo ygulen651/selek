@@ -1,103 +1,123 @@
-import Image from "next/image";
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import HeroSlider from '@/components/HeroSlider';
+import SearchBar from '@/components/SearchBar';
+import QuickLinks from '@/components/QuickLinks';
+import ModernTourCard from '@/components/ModernTourCard';
+import Services from '@/components/Services';
+import ModernFeatures from '@/components/ModernFeatures';
+
+const featuredTours = [
+  {
+    id: 1,
+    title: 'GAP (GÜNEYDOĞU) TURU',
+    location: 'KONYA ÇIKIŞLI',
+    duration: '9-12 EKİM 2025 (PERŞEMBE-PAZAR)',
+    groupSize: '2 Gece 3 Gün',
+    price: '9500 TL',
+    image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&h=600&fit=crop',
+    description: 'Sezon Boyu En Uygun Fiyatlarla',
+    category: 'GÜNEYDOĞU TURLARI',
+  },
+  {
+    id: 2,
+    title: 'İSTANBUL ADALAR TURU',
+    location: 'İSTANBUL ÇIKIŞLI',
+    duration: '10-12 EKİM 2025 (CUMA-PAZAR)',
+    groupSize: '1 Gece 2 Gün',
+    price: '5750 TL',
+    image: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&h=600&fit=crop',
+    description: 'Sezon Boyu En Uygun Fiyatlarla',
+    category: 'İSTANBUL TURLARI',
+  },
+  {
+    id: 3,
+    title: 'BUTİK EGE TURU (Ara Tatil)',
+    location: 'İZMİR ÇIKIŞLI',
+    duration: '8-11 KASIM 2025 (ARA TATİL)',
+    groupSize: '2 Gece 3 Gün',
+    price: '8000 TL',
+    image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&h=600&fit=crop',
+    description: 'Sezon Boyu En Uygun Fiyatlarla',
+    category: 'BUTİK EGE TURLARI',
+  },
+  {
+    id: 4,
+    title: 'KARADENİZ & BATUM TURU',
+    location: 'TRABZON ÇIKIŞLI',
+    duration: '15-18 EKİM 2025 (ÇARŞAMBA-CUMARTESİ)',
+    groupSize: '2 Gece 3 Gün',
+    price: '7500 TL',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
+    description: 'Sezon Boyu En Uygun Fiyatlarla',
+    category: 'KARADENİZ TURLARI',
+  },
+];
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      
+      <main className="flex-grow">
+        <HeroSlider />
+        <SearchBar />
+        <QuickLinks />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        {/* Öne Çıkan Turlar */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center mb-8">
+              <h2 className="text-3xl font-bold text-gray-900">
+                Güncel Konaklamalı Turlar
+              </h2>
+              <a 
+                href="/turlar" 
+                className="text-gray-600 hover:text-primary-600 transition-colors flex items-center"
+              >
+                Tümünü Gör →
+              </a>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {featuredTours.map((tour) => (
+                <ModernTourCard key={tour.id} {...tour} />
+              ))}
+            </div>
+
+          </div>
+        </section>
+
+        <Services />
+
+        <ModernFeatures />
+
+        {/* İstatistikler */}
+        <section className="py-20 bg-primary-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="text-5xl font-bold mb-2">2500+</div>
+                <div className="text-primary-100">Mutlu Müşteri</div>
+              </div>
+              <div>
+                <div className="text-5xl font-bold mb-2">50+</div>
+                <div className="text-primary-100">Ülke</div>
+              </div>
+              <div>
+                <div className="text-5xl font-bold mb-2">300+</div>
+                <div className="text-primary-100">Tur Paketi</div>
+              </div>
+              <div>
+                <div className="text-5xl font-bold mb-2">15+</div>
+                <div className="text-primary-100">Yıllık Deneyim</div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      <Footer />
     </div>
   );
 }

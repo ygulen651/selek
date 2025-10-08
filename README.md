@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SELEK TURIZM - Seyahat Acentası Web Sitesi
 
-## Getting Started
+Modern ve sade tasarıma sahip, Next.js ile geliştirilmiş bir turizm/seyahat acentası web sitesi.
 
-First, run the development server:
+## Özellikler
 
+- Modern ve responsive tasarım
+- Next.js 15 App Router
+- TypeScript desteği
+- Tailwind CSS ile stil
+- Lucide React ikonları
+- Tam responsive (mobil, tablet, desktop)
+
+## Sayfalar
+
+- **Ana Sayfa**: Hero bölümü, öne çıkan turlar, hizmetler ve istatistikler
+- **Turlar**: Tüm tur paketlerinin listelendiği sayfa
+- **Hakkımızda**: Şirket hikayesi ve değerleri
+- **İletişim**: İletişim formu ve bilgileri
+
+## Kurulum
+
+1. Bağımlılıkları yükleyin:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Geliştirme sunucusunu başlatın:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Tarayıcınızda açın:
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Üretim
 
-## Learn More
+Üretim için build almak:
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Teknolojiler
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- Lucide React Icons
+- Unsplash API (Örnek Resimler)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Geliştirme
 
-## Deploy on Vercel
+Proje klasör yapısı:
+```
+turuzim/
+├── app/                 # Next.js sayfaları
+│   ├── page.tsx        # Ana sayfa
+│   ├── turlar/         # Turlar sayfası
+│   ├── hakkimizda/     # Hakkımızda sayfası
+│   └── iletisim/       # İletişim sayfası
+├── components/          # Yeniden kullanılabilir bileşenler
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   ├── Hero.tsx
+│   ├── TourCard.tsx
+│   └── Services.tsx
+└── public/             # Statik dosyalar
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Lisans
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Bu proje MIT lisansı altında lisanslanmıştır.
