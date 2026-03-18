@@ -95,7 +95,7 @@ export default function HeroSlider() {
                 <div className="md:hidden absolute inset-0 flex flex-col justify-center px-4 py-6">
                   {/* Main Image - Full Width on Mobile */}
                   <div 
-                    className="w-full h-[450px] rounded-2xl overflow-hidden shadow-2xl relative"
+                    className="w-full h-[450px] rounded-3xl overflow-hidden shadow-2xl relative"
                     style={{
                       backgroundImage: `url(${slide.mainImage})`,
                       backgroundSize: 'cover',
@@ -103,13 +103,13 @@ export default function HeroSlider() {
                     }}
                   >
                     {/* Strong Gradient Overlay for better text readability */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/95 via-gray-900/50 to-transparent" />
                     
                     {/* Content - Well positioned */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                      <h1 className="text-3xl font-bold mb-3 leading-tight drop-shadow-lg">{slide.title}</h1>
-                      <p className="text-lg mb-2 font-semibold drop-shadow-md">{slide.subtitle}</p>
-                      <p className="text-base opacity-95 leading-relaxed">{slide.description}</p>
+                    <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                      <h1 className="text-4xl font-bold mb-3 leading-tight drop-shadow-lg font-serif">{slide.title}</h1>
+                      <p className="text-xl mb-3 font-medium text-primary-200 drop-shadow-md">{slide.subtitle}</p>
+                      <p className="text-base opacity-90 leading-relaxed font-light">{slide.description}</p>
                     </div>
                     
                     {/* Top Badge */}
@@ -173,18 +173,18 @@ export default function HeroSlider() {
                   {/* Center - Main Image with Content */}
                   <div className="flex-1 mx-4 lg:mx-8 relative">
                     <div 
-                      className="w-full h-80 md:h-96 lg:h-[28rem] rounded-2xl overflow-hidden shadow-2xl relative group"
+                      className="w-full h-80 md:h-96 lg:h-[32rem] rounded-3xl overflow-hidden shadow-2xl relative group"
                       style={{
                         backgroundImage: `url(${slide.mainImage})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                       }}
                     >
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white">
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight">{slide.title}</h1>
-                        <p className="text-lg md:text-xl mb-3 font-medium">{slide.subtitle}</p>
-                        <p className="text-base md:text-lg opacity-90">{slide.description}</p>
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/95 via-gray-900/40 to-transparent group-hover:from-gray-900/100 transition-colors duration-500" />
+                      <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight font-serif drop-shadow-xl">{slide.title}</h1>
+                        <p className="text-xl md:text-2xl mb-4 font-medium text-primary-200 drop-shadow-lg">{slide.subtitle}</p>
+                        <p className="text-lg md:text-xl opacity-90 font-light max-w-2xl">{slide.description}</p>
                       </div>
                       <div className="absolute top-4 right-4 w-16 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
                         <div className="text-white text-xs font-bold">SELEK</div>
