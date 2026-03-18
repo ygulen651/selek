@@ -65,23 +65,31 @@ export default function Home() {
         <QuickLinks />
 
         {/* Öne Çıkan Turlar */}
-        <section className="py-20 bg-white">
+        <section className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-900">
-                Güncel Konaklamalı Turlar
-              </h2>
+            <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+              <div className="max-w-2xl">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4 font-serif">
+                  Güncel Konaklamalı Turlar
+                </h2>
+                <p className="text-gray-600 text-lg font-light">
+                  Size özel hazırladığımız en seçkin tur paketlerini keşfedin ve hayalinizdeki tatile ilk adımı atın.
+                </p>
+              </div>
               <a 
                 href="/turlar" 
-                className="text-gray-600 hover:text-primary-600 transition-colors flex items-center"
+                className="mt-6 md:mt-0 text-primary-600 font-medium hover:text-primary-700 transition-colors flex items-center group"
               >
-                Tümünü Gör →
+                Tümünü Gör
+                <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
               </a>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {featuredTours.map((tour) => (
-                <ModernTourCard key={tour.id} {...tour} />
+                <div key={tour.id} className="h-full">
+                  <ModernTourCard {...tour} />
+                </div>
               ))}
             </div>
 
@@ -93,24 +101,27 @@ export default function Home() {
         <ModernFeatures />
 
         {/* İstatistikler */}
-        <section className="py-20 bg-primary-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-5xl font-bold mb-2">2500+</div>
-                <div className="text-primary-100">Mutlu Müşteri</div>
+        <section className="py-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-primary-900"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-600 opacity-90"></div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center divide-x divide-primary-400/30">
+              <div className="px-4">
+                <div className="text-5xl lg:text-6xl font-bold mb-3 text-white font-serif drop-shadow-md">2500+</div>
+                <div className="text-primary-100 font-medium tracking-wide uppercase text-sm">Mutlu Müşteri</div>
               </div>
-              <div>
-                <div className="text-5xl font-bold mb-2">50+</div>
-                <div className="text-primary-100">Ülke</div>
+              <div className="px-4">
+                <div className="text-5xl lg:text-6xl font-bold mb-3 text-white font-serif drop-shadow-md">50+</div>
+                <div className="text-primary-100 font-medium tracking-wide uppercase text-sm">Ülke</div>
               </div>
-              <div>
-                <div className="text-5xl font-bold mb-2">300+</div>
-                <div className="text-primary-100">Tur Paketi</div>
+              <div className="px-4">
+                <div className="text-5xl lg:text-6xl font-bold mb-3 text-white font-serif drop-shadow-md">300+</div>
+                <div className="text-primary-100 font-medium tracking-wide uppercase text-sm">Tur Paketi</div>
               </div>
-              <div>
-                <div className="text-5xl font-bold mb-2">15+</div>
-                <div className="text-primary-100">Yıllık Deneyim</div>
+              <div className="px-4">
+                <div className="text-5xl lg:text-6xl font-bold mb-3 text-white font-serif drop-shadow-md">15+</div>
+                <div className="text-primary-100 font-medium tracking-wide uppercase text-sm">Yıllık Deneyim</div>
               </div>
             </div>
           </div>
