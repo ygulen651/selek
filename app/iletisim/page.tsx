@@ -233,12 +233,6 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Harita */}
-        <section className="bg-gray-300 h-96">
-          <div className="w-full h-full flex items-center justify-center text-gray-600">
-            Google Maps entegrasyonu buraya eklenebilir
-          </div>
-        </section>
       </main>
 
       <Footer />
