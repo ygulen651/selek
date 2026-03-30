@@ -1,4 +1,5 @@
 import { Clock, Star, Calendar } from 'lucide-react';
+import Image from 'next/image';
 
 interface ModernTourCardProps {
   title: string;
@@ -22,15 +23,13 @@ export default function ModernTourCard({
 }: ModernTourCardProps) {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
-      <div className="relative h-64 overflow-hidden">
-        <div 
-          className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 transition-transform duration-300 group-hover:scale-105"
-          style={{
-            backgroundImage: `url(${image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
+      <div className="relative h-64 overflow-hidden bg-gradient-to-br from-primary-400 to-primary-600">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         
         {/* Overlay */}
