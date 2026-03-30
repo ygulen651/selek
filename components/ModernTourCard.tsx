@@ -1,5 +1,7 @@
 import { Clock, Star, Calendar } from 'lucide-react';
 
+const STARS = Array(5).fill(0);
+
 interface ModernTourCardProps {
   title: string;
   location: string;
@@ -41,7 +43,7 @@ export default function ModernTourCard({
           <h3 className="text-white text-xl font-bold mb-2">{title}</h3>
           <div className="flex items-center mb-2">
             <div className="flex text-yellow-400">
-              {[...Array(5)].map((_, i) => (
+              {STARS.map((_, i) => (
                 <Star key={i} className="h-4 w-4 fill-current" />
               ))}
             </div>
